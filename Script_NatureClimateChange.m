@@ -1,5 +1,5 @@
 % % % % Scripts for 'Shifts in microbial temperature relationships under warming can mitigate heat-induced losses in carbon stocks (Paper: Brangarí et al, 2024, submitted to Nature Climate Change)
-% % % % By Albert C Brangarí. University of Amsterdam, Institute for Niodiversity and Ecosystem Dynamics (IBED), 2023.
+% % % % By Albert C Brangarí. University of Amsterdam, Institute for Biodiversity and Ecosystem Dynamics (IBED), 2023.
 % % % % To run: download this file and HarvardForest_ExperimentalData.xls, and save them in the same folder. Then, run this Matlab script from there
 
 close all; 
