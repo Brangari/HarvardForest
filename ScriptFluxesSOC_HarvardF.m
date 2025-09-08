@@ -233,7 +233,7 @@ figure(1); set(gcf,'Position',get(0,'Screensize')); set(gcf,'color','w');
         b(2) = bar(2,NaN,'FaceColor',colorOrgH);
         b(3) = bar(3,NaN,'FaceColor',colorMinC);
         b(4) = bar(4,NaN,'FaceColor',colorMinH);
-        set(gca,'fontsize',sizeF); xlabel('Temperature [°C]'); ylabel('Norm \surd Bacterial growth'); axis([-10 40 0 1.5]); legend(b,{'Control ORG','Warming ORG','Control MIN','Warming MIN',},'Orientation','horizontal');
+        set(gca,'fontsize',sizeF); xlabel('Temperature [°C]'); ylabel('Norm \surd Bacterial growth'); axis([-10 40 0 1.5]); legend(b,{'Ambient ORG','Warming ORG','Ambient MIN','Warming MIN',},'Orientation','horizontal');
     subplot(3,3,[3 6]); 
         plot(depTg_vec,norm_depF_vec_treat(2,:),'o','MarkerEdgeColor',colorOrgC); hold on; errorbar(depTg_vec,norm_depF_vec_treat(2,:),se_norm_depF_vec_treat(2,:),'Color',colorOrgC,'linestyle','none'); plot(vecT,norm_regYF(2,:),'Color',colorOrgC,'LineWidth',2); 
         plot(depTg_vec,norm_depF_vec_treat(4,:),'o','MarkerEdgeColor',colorOrgH); hold on; errorbar(depTg_vec,norm_depF_vec_treat(4,:),se_norm_depF_vec_treat(4,:),'Color',colorOrgH,'linestyle','none'); plot(vecT,norm_regYF(4,:),'Color',colorOrgH,'LineWidth',2); 
@@ -418,7 +418,7 @@ figure(2); set(gcf,'Position',get(0,'Screensize')); set(gcf,'color','w');
                       b(2) = bar(2,NaN,'FaceColor',colorOrgH);
                       b(3) = bar(3,NaN,'FaceColor',colorMinC);
                       b(4) = bar(4,NaN,'FaceColor',colorMinH);
-                      legend(b,{'Control ORG','Warming ORG','Control MIN','Warming MIN',},'Orientation','horizontal');
+                      legend(b,{'Ambient ORG','Warming ORG','Ambient MIN','Warming MIN',},'Orientation','horizontal');
     subplot(2,2,1); plot(TimeD,Trespir_gSOC_treat(2,:),'Color',colorOrgC,'LineWidth',2); hold on;
                       plot(TimeD,Trespir_gSOC_treat(4,:),'Color',colorOrgH,'LineWidth',2);
                       plot(TimeD,Trespir_gSOC_treat(1,:),'Color',colorMinC,'LineWidth',2);
@@ -464,7 +464,7 @@ figure(6);
         h(2)=plot(vecT(21:97),CUET_treat_x(2,21:97)*100,'Color',colorOrgH,'LineWidth',2);
         plot(mean_TmaxCUE(2),mean_CUEpl(2),'Marker','o','MarkerEdgeColor',colorOrgH,'MarkerSize',5,'LineWidth',2);
         errorbar(mean_TmaxCUE(2),mean_CUEpl(2),se_TmaxCUE(2),'horizontal','k','linestyle','none');
-        set(gca,'fontsize',sizeF); xlabel('Temperature [°C]'); ylabel('CUE [%]'); axis([-10 40 0 30]); legend(h,{'Control','Warming'});
+        set(gca,'fontsize',sizeF); xlabel('Temperature [°C]'); ylabel('CUE [%]'); axis([-10 40 0 30]); legend(h,{'Ambient','Warming'});
 
 %% VIRTUAL TRANSPLANTATION (direct & indirect effects of temperature)
 
@@ -548,7 +548,7 @@ figure(2); set(gcf,'Position',get(0,'Screensize')); set(gcf,'color','w');
                     d = bar(1,yrTrespir_m2_transp_treat_x(1),'FaceAlpha',0,'EdgeColor',colorOrgT_p5,'LineWidth',2,'LineStyle','--'); 
                     errorbar(1,yrTrespir_m2_transp_treat_x(1),se_yrTrespir_m2_transp_treat_x(1),'k','linestyle','none');
                     ylabel({'Total respiration';'[gC/m^2/y]'}); set(gca,'fontsize',sizeF); set(gca,'xtick',[]); set(gca,'xticklabels',[]); 
-                    legend(d,{'Control +5°C',},'Orientation','horizontal');
+                    legend(d,{'Ambient +5°C',},'Orientation','horizontal');
     subplot(2,3,6); b = bar(CUE_treat_x*100,'FaceColor','flat'); hold on;  
                     b.CData(1,:) = colorOrgC; b.CData(2,:) = colorOrgH;
                     errorbar([0.95 2],CUE_treat_x*100,seCUE_treat_x*100,'k','linestyle','none');
