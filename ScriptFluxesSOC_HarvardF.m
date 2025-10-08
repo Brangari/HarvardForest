@@ -1,5 +1,5 @@
-%%%%%%%%% Script for "Shifts in microbial thermal traits mitigate heat-induced carbon losses in soils, Global Change Biology, 2025".
-%%%%%%%%% Code to generate model results and figures by Albert C. Brangarí, University of Amsterdam, IBED, 2024. E-mail: a.carlesbrangari@uva.nl% 
+%%%%%%%%% Script for "Shifts in microbial thermal traits mitigate heat-induced carbon losses in soils, Global Change Biology, 2025/2026".
+%%%%%%%%% Code to generate model results and figures by Albert C. Brangarí, University of Amsterdam, IBED, 2024. E-mail: a.carlesbrangari@uva.nl 
  
 close all; 
 clearvars;
@@ -46,18 +46,7 @@ colorOrgT_p5 = [0.6 0 0.6];
 colorMinT_p5 = [1 0.6 0.8];
 colorOrgT_m5 = [0.5 0 1];
 colorMinT_m5 = [0.6 0.6 1];
-% ngroups = 4;
-% nbars = 1;
-% groupwidth = min(0.8,nbars/(nbars+1.5));
-% for i = 1:nbars
-%     xposB(:,i) = (1:ngroups)-groupwidth/2+(2*i-1)*groupwidth/(2*nbars);
-% end
-% ngroups = 2;
-% nbars = 4;
-% groupwidth = min(0.8,nbars/(nbars+1.5));
-% for i = 1:nbars
-%     xposA(:,i) = (1:ngroups)-groupwidth/2+(2*i-1)*groupwidth/(2*nbars);
-% end
+
 ngroups = 2;
 nbars = 2;
 groupwidth = min(0.8,nbars/(nbars+1.5));
@@ -145,9 +134,6 @@ for ii = 1:41
         norm2 = funGsq(normV25,[parB_a(ii) parB_Tm(ii) parB(ii,:)]); norm_depB_vec(ii,:) = depB_vec(ii,:)/norm2;
         Brate_gSOC(ii) = fconB*(norm2).^2;
         Brate_gds(ii) = Brate_gSOC(ii)*SOC(ii);
-%         norm3 = sqrt(funR(normV25,parR(ii,:))); norm_depR_vec(ii,:) = depR_vec(ii,:)/norm3;
-%         Rrate_gSOC(ii) = fconR*(norm3).^2;
-%         Rrate_gds(ii) = Rrate_gSOC(ii)*SOC(ii);
 
         norm3 = funR(normV25,parR(ii,:)); norm_depR_vec(ii,:) = depR_vec(ii,:)/norm3;
         Rrate_gSOC(ii) = fconR*(norm3).^2;
